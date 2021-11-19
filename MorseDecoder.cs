@@ -29,6 +29,10 @@ namespace NoVowels
             var result = new StringBuilder();
             var currentSequence = new StringBuilder();
             var trimmedBits = bits.Trim('0');
+            if (string.IsNullOrWhiteSpace(trimmedBits))
+            {
+                trimmedBits = bits;
+            }
 
             var timeUnitLength = DetermineTimeUnitLength(trimmedBits);
 
